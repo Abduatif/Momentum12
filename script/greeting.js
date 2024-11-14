@@ -1,21 +1,10 @@
+import { timeDay } from "./utiles/timeofDay.js";
 export function greeting () {
     const greetingElement = document.querySelector('.greeting')
 
-    const currentDate = new Date();
-    const hour = currentDate.getHours();
+   
 
-    greetingElement.textContent = showGreeting(hour);
+    greetingElement.textContent = 'Good ' + timeDay();
 
 }
 
-function showGreeting(hour) {
-    if (hour >= 6 && 12 > hour) {
-        return 'Good morning'
-    }else if(hour >=12 && hour <18){
-        return 'Good afternoon';
-    }else if(hour >= 18 && hour < 24){
-        return "Good evening";
-    }else{
-        return 'Good night';
-    }
-}
